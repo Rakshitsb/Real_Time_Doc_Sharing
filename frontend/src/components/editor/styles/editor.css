@@ -1,0 +1,124 @@
+.doczz-editor .ProseMirror {
+  min-height: 560px;
+  outline: none;
+  padding: 3rem clamp(1rem, 5vw, 4rem);
+}
+
+.doczz-editor .ProseMirror > * + * {
+  margin-top: 0.85rem;
+}
+
+.doczz-editor .ProseMirror h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.doczz-editor .ProseMirror h2 {
+  font-size: 1.65rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.doczz-editor .ProseMirror p {
+  line-height: 1.85;
+}
+
+.doczz-editor .ProseMirror ul,
+.doczz-editor .ProseMirror ol {
+  padding-left: 1.5rem;
+}
+
+.doczz-editor .ProseMirror ul {
+  list-style: disc;
+}
+
+.doczz-editor .ProseMirror ol {
+  list-style: decimal;
+}
+
+.doczz-editor .ProseMirror blockquote {
+  border-left: 3px solid hsl(var(--accent));
+  color: hsl(var(--muted-foreground));
+  padding-left: 1rem;
+}
+
+.doczz-editor .ProseMirror code {
+  border-radius: 0.35rem;
+  background: hsl(var(--secondary));
+  padding: 0.15rem 0.35rem;
+  font-size: 0.88em;
+}
+
+.doczz-editor .ProseMirror pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.doczz-editor .ProseMirror table {
+  margin: 1.25rem 0;
+}
+
+.doczz-editor .ProseMirror th,
+.doczz-editor .ProseMirror td {
+  border: 1px solid hsl(var(--border));
+  min-width: 90px;
+  padding: 0.6rem;
+  vertical-align: top;
+}
+
+.doczz-editor .ProseMirror th {
+  background: hsl(var(--secondary));
+  font-weight: 600;
+}
+
+.doczz-editor .ProseMirror img {
+  max-width: 100%;
+}
+
+.doczz-editor .ProseMirror p.is-editor-empty:first-child::before {
+  color: hsl(var(--muted-foreground));
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.collaboration-caret {
+  border-left: 2px solid;
+  border-right: 2px solid;
+  margin-left: -1px;
+  margin-right: -1px;
+  pointer-events: none;
+  position: relative;
+  word-break: normal;
+}
+
+.collaboration-caret__label {
+  border-radius: 0.35rem;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+  left: -2px;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  top: -1.45rem;
+  white-space: nowrap;
+}
+
+.collaboration-selection {
+  border-radius: 0.2rem;
+}
+
+.comment-anchor {
+  background: color-mix(in srgb, hsl(var(--accent)) 22%, transparent);
+  border-bottom: 2px solid hsl(var(--accent));
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.comment-anchor[data-comment-status="resolved"] {
+  background: color-mix(in srgb, hsl(var(--muted-foreground)) 14%, transparent);
+  border-bottom-color: hsl(var(--muted-foreground));
+}

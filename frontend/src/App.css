@@ -1,6 +1,1 @@
-*{
-  margin: 0px;
-  padding: o px;
-  overflow: hidden;
-}
-
+/* App-level styles are intentionally handled by Tailwind utilities and theme tokens. */
