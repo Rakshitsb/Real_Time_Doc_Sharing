@@ -18,7 +18,7 @@ const env = {
   nodeEnv: process.env.NODE_ENV || "development",
   isProduction: process.env.NODE_ENV === "production",
   port: Number(process.env.PORT) || 5000,
-  mongoUri: getEnv("MONGO_URI", "mongodb://localhost:27017/EyInternship"),
+  mongoUri: getEnv("MONGO_URI", "mongodb+srv://rakshit123:rakshit123@rakshitcluster.dqxariv.mongodb.net/EyInternship"),
   jwtSecret: getEnv("JWT_SECRET", "Rakshitb"),
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "1h",
   clientUrl: process.env.CLIENT_URL || "http://localhost:5173",
