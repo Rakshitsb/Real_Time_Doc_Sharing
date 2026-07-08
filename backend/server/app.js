@@ -4,6 +4,7 @@ import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 import API_ROUTES from "./constants/routes.js";
 import env from "./config/env.js";
+import aiRouter from "./ai/routes/ai.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import documentRouter from "./routes/document.routes.js";
 import notificationRouter from "./routes/notification.routes.js";
@@ -55,6 +56,7 @@ app.get(API_ROUTES.HEALTH, (req, res) => {
 
 // ── API Routes ────────────────────────────────────────────────────────────────
 app.use(API_ROUTES.AUTH, authLimiter, authRouter);
+app.use(API_ROUTES.AI, aiRouter);
 app.use(API_ROUTES.DOCUMENTS, documentRouter);
 app.use(API_ROUTES.NOTIFICATIONS, notificationRouter);
 

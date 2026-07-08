@@ -10,11 +10,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  test: {
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.js',
-    globals: true,
-  },
   build: {
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
@@ -59,4 +54,3 @@ export default defineConfig({
     },
   },
 })
-

@@ -5,14 +5,12 @@
 **A production-grade SaaS collaborative document platform built with the MERN stack.**
 Rich text editing, real-time co-authorship, threaded comments, and instant chat — all in one workspace.
 
-[![CI](https://github.com/Rakshitsb1/Real_Time_Doc_Sharing/actions/workflows/ci.yml/badge.svg)](https://github.com/Rakshitsb1/Real_Time_Doc_Sharing/actions)
 ![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8-black?logo=socket.io)
 ![MongoDB](https://img.shields.io/badge/MongoDB-7-green?logo=mongodb)
-![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)
 
-[Live Demo](#) · [API Docs](./docs/API.md) · [Architecture](./docs/ARCHITECTURE.md) · [Socket Events](./docs/SOCKET_EVENTS.md)
+[Live Demo](#) · [API Reference](#-api-reference) · [Socket Events](#-socket-events)
 
 </div>
 
@@ -97,8 +95,6 @@ Rich text editing, real-time co-authorship, threaded comments, and instant chat 
                     │   MongoDB    │
                     └──────────────┘
 ```
-
-For a detailed collaboration architecture, see [ARCHITECTURE.md](./docs/ARCHITECTURE.md).
 
 ---
 
@@ -224,7 +220,6 @@ Real_Time_Doc_Sharing/
 │   │   ├── services/        # Business logic
 │   │   ├── socket/          # Socket.IO handlers + rooms + events
 │   │   └── utils/           # Logger, pagination, hashing
-│   ├── Dockerfile
 │   └── index.js             # Entry point
 │
 ├── frontend/
@@ -237,27 +232,18 @@ Real_Time_Doc_Sharing/
 │   │   ├── services/        # API service functions
 │   │   ├── socket/          # Socket.IO client
 │   │   └── utils/           # Storage, error helpers
-│   ├── Dockerfile
 │   └── vite.config.js
-│
-├── docs/
-│   ├── API.md
-│   ├── ARCHITECTURE.md
-│   └── SOCKET_EVENTS.md
-│
-├── docker-compose.yml
-└── .github/workflows/ci.yml
 ```
 
 ---
 
 ## 🔌 API Reference
 
-See [docs/API.md](./docs/API.md) for full REST endpoint documentation.
+Core REST routes are defined under `backend/server/routes`.
 
 ## 📡 Socket Events
 
-See [docs/SOCKET_EVENTS.md](./docs/SOCKET_EVENTS.md) for all Socket.IO events.
+Socket.IO events are defined under `backend/server/socket/events` and `frontend/src/collaboration/socket`.
 
 ---
 
